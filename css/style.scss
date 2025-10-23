@@ -96,3 +96,18 @@ $ligth-color: #f6f6f6;
         
     }
 }
+
+/*2 eme section*/
+@media (min-width: 375px) and (max-width: 768px) {
+
+    .deuxieme__section {
+        display: flex;
+        flex-direction: column;
+    }
+/*Éléments*/
+    .section2__title {
+        font-size: 24px;
+        font-weight: 700;
+        padding-top: 30px;
+}
+}
