@@ -6,21 +6,23 @@
      <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="css/style.css" >
 </head>
 <body>
 
 <header>    
     <img class="header__logo" src="images/logo/ohmyfood.png" alt="Logo-ohmyfood">
-        <p class="header__location">
-            <i class="fa-solid fa-location-dot"></i>
-            Paris, Belleville
-        </p>
+        <div class="header__form">
+            <form class="header__button">
+                <i class="fa-solid fa-location-dot"></i>
+                <input  class="header__input"placeholder="  Paris Belleville"/>
+            </form>
+        </div>
 </header>
 
 <main>
 
-<section>
+<section class="premiere-section">
     <h1 class="section__title">Réservez le menu qui vous convient</h1>
     <p class="section__paragraph">Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
     <button class="section__button">Explorer nos restaurants</button>
@@ -42,7 +44,7 @@
             <img src="restaurant/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
             <h3>La palette du goût</h3>
             <p>Ménilmontant</p>
-            <i class="fa-solid fa-heart"></i>
+            <button><i class="fa-solid fa-heart"></i></button>
         </div>
     </article>
     <article>
