@@ -1,0 +1,59 @@
+/*Restaurant*/
+
+
+    .restaurant-section {
+        display: flex;
+        flex-direction: column;
+        background-color:#f6f6f6;
+        
+    }
+
+/*Éléments*/
+
+
+    .restaurant__article {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+    
+    .restaurant__link{
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+
+    .restaurant__title {
+        padding: top 30px;
+        padding-left: 15px;
+    }
+   
+
+        restaurant__img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .restaurant__content{
+            margin: left 10px;
+        }
+        .restaurant__box{
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+           
+        }
+      
+        
+
+
+    
+    
+    
+
+    

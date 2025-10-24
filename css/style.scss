@@ -1,11 +1,18 @@
-@use 'header.scss';
-@use 'reservation.scss';
-@use 'fonctionality.scss';
-@use 'footer.scss';
-@use 'restaurant.scss';
-@use 'variable.scss';
-@use 'mixin.scss';
+@use 'header';
+@use 'reservation';
+@use 'fonctionality';
+@use 'footer';
+@use 'restaurant';
+html, body {
+    padding:0;
+    margin:0;
+    width: 100%;;
+}
 
+* {
+
+    max-width: 100%;
+}
 
 
 

@@ -8,7 +8,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
         
     }
 /*Éléments*/
@@ -23,7 +23,8 @@
             font-size: 18px;
             margin-top:-10px;
             color:#353525;
-        font-weight:300;
+            padding-left:10px;
+            padding-right:10px;
     }
 
     .reservation__button {
@@ -34,7 +35,7 @@
         border: none;
         padding: 15px 30px;
         font-size: 16px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         
     }
 }
