@@ -1,11 +1,4 @@
 @charset "UTF-8";
-body {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-/*Variable générales*/
-/*mixins générales*/
 /*header*/
 @media (min-width: 375px) and (max-width: 768px) {
   header {
@@ -44,7 +37,7 @@ body {
 }
 /*1 ere section*/
 @media (min-width: 375px) and (max-width: 768px) {
-  .premiere-section {
+  .reservation-section {
     display: flex;
     background-color: #f6f6f6;
     flex-direction: column;
@@ -54,20 +47,20 @@ body {
     padding-bottom: 30px;
   }
   /*Éléments*/
-  .section__title {
+  .reservation__title {
     font-size: 24px;
     font-weight: bold;
     margin-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
   }
-  .section__paragraph {
+  .reservation__paragraph {
     font-size: 18px;
     margin-top: -10px;
     color: #353525;
     font-weight: 300;
   }
-  .section__button {
+  .reservation__button {
     margin-top: 10px;
     border-radius: 30px;
     background: linear-gradient(to bottom, #ff79da, #9356dc);
@@ -77,4 +70,67 @@ body {
     font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*2 eme section*/
+@media (min-width: 375px) and (max-width: 768px) {
+  .deuxieme__section {
+    display: flex;
+    flex-direction: column;
+  }
+  /*Éléments*/
+  .section2__title {
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 30px;
+  }
+  .section2__article {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #f6f6f6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: black;
+  }
+  i {
+    margin-left: -30px;
+    padding-right: 30px;
+    color: #7E7E7E;
+  }
+  .icon3 {
+    color: #9356dc;
+  }
+}
+/*3 eme section*/
+@media (min-width: 375px) and (max-width: 768px) {
+  .restaurant-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+  }
+  /*Éléments*/
+  .restaurant__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+  }
+}
+/*Variable générales*/
+/*mixins générales*//*# sourceMappingURL=style.css.map */
