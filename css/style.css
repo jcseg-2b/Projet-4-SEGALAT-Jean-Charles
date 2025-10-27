@@ -35,17 +35,8 @@
   background: transparent;
   font-size: 1rem;
   padding: 0.5rem;
-  width: 50%;
-  display: flex;
-  margin: auto;
-}
-.header__input::-moz-placeholder {
-  color: #353535;
-  font-weight: 500;
-}
-.header__input::placeholder {
-  color: #353535;
-  font-weight: 500;
+  width: 100%;
+  margin-left: 60px;
 }
 
 /*1 ere section*/
@@ -142,33 +133,31 @@
     left: 10px;
   }
 }
-.restaurant-section {
+.footer {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #353535;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.footer__title {
+  color: white;
+  padding-left: 40px;
+}
+.footer__list {
+  color: white;
+  list-style-type: none;
+  gap: 10px;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+
+.restaurant {
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
-}
-.restaurant__box {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.restaurant__article {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.restaurant__link {
-  width: 100%;
-  text-decoration: none;
-  color: black;
-  display: block;
-}
-.restaurant__title {
-  padding-left: 15px;
 }
 .restaurant__img {
   width: 100%;
@@ -177,21 +166,62 @@
      object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  display: block;
+}
+.restaurant__box {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
+.restaurant__article {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  position: relative;
+  min-height: 220px;
+}
+.restaurant__link {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+.restaurant__title {
+  padding-left: 15px;
+  padding-top: 30px;
 }
 .restaurant__content {
-  margin-left: 10px;
+  margin-left: 15px;
+  font-size: 18px;
+  padding-bottom: 10px;
 }
 .restaurant__paragraph {
-  margin-left: 10px;
+  margin-left: 15px;
   margin-top: -25px;
 }
-.restaurant__button {
+.restaurant__button1 {
   position: absolute;
-  right: 100px;
-  bottom: -305px;
-  width: 22px;
-  height: 22px;
+  right: 30px;
+  bottom: 30px;
+}
+.restaurant__button2 {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.restaurant__button3 {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.restaurant__button4 {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
 }
 
 html, body {
