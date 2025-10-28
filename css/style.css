@@ -139,19 +139,34 @@
   background-color: #353535;
   padding-top: 30px;
   padding-bottom: 30px;
+  position: relative;
 }
 .footer__title {
   color: white;
   padding-left: 40px;
 }
-.footer__list {
+.footer__list1 {
+  color: red;
+  list-style-type: none;
+}
+.footer__list2 {
   color: white;
   list-style-type: none;
+}
+.footer__list3 {
+  color: white;
+  list-style-type: none;
+  display: flex;
   gap: 10px;
+  flex-direction: column;
 }
 .footer__link {
   color: white;
   text-decoration: none;
+}
+.footer i {
+  color: white;
+  padding-right: 10px;
 }
 
 .restaurant {

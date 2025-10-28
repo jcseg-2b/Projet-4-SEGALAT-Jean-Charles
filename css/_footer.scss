@@ -4,6 +4,7 @@
     background-color: #353535;
     padding-top:30px;
     padding-bottom:30px;
+    position: relative;
 
 
   
@@ -14,16 +15,35 @@
         
     }
 
-    &__list{
-        color:white;
-        list-style-type: none;
-        gap:10px;
+    &__list1{
+        color:red;
+        list-style-type: none;   
+      
       
 }
+    &__list2{
+        color:white;
+        list-style-type: none;
+    }
+    &__list3{
+        color:white;
+        list-style-type: none;
+        display: flex;
+        gap:10px;
+        flex-direction: column;
+    }
+  
+  
+    
     &__link{
       
         color:white;
         text-decoration: none;
+    }
+
+    i{
+        color:white;
+        padding-right: 10px;
     }
 }
 
