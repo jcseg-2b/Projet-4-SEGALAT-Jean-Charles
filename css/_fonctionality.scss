@@ -1,6 +1,6 @@
-
+@use 'variables';
     /*2 eme section*/
-@media (min-width: 375px) and (max-width: 768px) {
+
     .fonctionality {
         &-section {
             display: flex;
@@ -47,12 +47,13 @@
         }
 
         .icon3 {
-            color: #9356dc;
+            color:$purple-color;
         }
     
             .fonctionality__button {
                 color: white;
-                background-color: #9356dc;
+                background-color:$purple-color;
+                border: none;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -68,4 +69,3 @@
     }
 
        
-}
