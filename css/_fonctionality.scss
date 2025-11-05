@@ -15,6 +15,12 @@
             font-weight: 700;
             padding-top: 30px;
             padding-left: 20px;
+            @media screen and (min-width: 768px)and (max-width: 1023px) {  
+                display: flex;
+                justify-content:center;
+                margin-left: -30px;
+                             
+            }
             @media screen and (min-width: 1024px) {
                 margin-left:-440px;   
                 display: flex;
@@ -30,10 +36,16 @@
             padding-bottom: 50px;
             padding-left: 20px;
             padding-right: 20px;
+            @media screen and (min-width: 768px)and (max-width: 1023px) {  
+                justify-content:center;
+                width:450px;
+                margin: auto;
+                
+            }
             @media screen and (min-width: 1024px) {
                 flex-direction: row;
-                justify-content: center;
-                gap:100px;
+                justify-content:center;
+                gap:90px;
                 padding-left:0px;
                      
             }
@@ -86,6 +98,11 @@
                 height: 24px;
                 position:absolute;
                 left: 10px;
+                @media screen and (min-width: 768px)and (max-width: 1023px) {  
+                    position: relative;
+                    left: -130px;
+                    
+                }
                 @media screen and (min-width: 1024px) {
                     position: relative;
                     left: -50px;
