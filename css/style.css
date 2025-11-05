@@ -21,6 +21,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
 }
+@media screen and (min-width: 1024px) {
+  .header__form {
+    box-shadow: none;
+  }
+}
 .header__icon {
   display: flex;
   align-items: center;
@@ -49,6 +54,11 @@
   text-align: center;
   padding-bottom: 50px;
 }
+@media screen and (min-width: 1024px) {
+  .reservation-section {
+    padding-bottom: 30px;
+  }
+}
 
 /*Éléments*/
 .reservation__title {
@@ -58,6 +68,11 @@
   padding-left: 50px;
   padding-right: 50px;
 }
+@media screen and (min-width: 1024px) {
+  .reservation__title {
+    font-size: 40px;
+  }
+}
 
 .reservation__paragraph {
   font-size: 18px;
@@ -66,7 +81,6 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .reservation__button {
   margin-top: 10px;
   border-radius: 30px;
@@ -78,6 +92,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/*Variable générales*/
 /*2 eme section*/
 .fonctionality-section {
   display: flex;
@@ -89,6 +104,13 @@
   padding-top: 30px;
   padding-left: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .fonctionality__title {
+    margin-left: -380px;
+    display: flex;
+    justify-content: center;
+  }
+}
 .fonctionality__article {
   gap: 20px;
   display: flex;
@@ -96,6 +118,14 @@
   padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionality__article {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    padding-left: 0px;
+  }
 }
 .fonctionality__link {
   text-decoration: none;
@@ -113,17 +143,23 @@
   color: black;
   text-decoration: none;
 }
-.fonctionality__box i {
+@media screen and (min-width: 1024px) {
+  .fonctionality__box {
+    width: 100%;
+  }
+}
+.fonctionality i {
   margin-left: -30px;
   padding-right: 30px;
   color: #7E7E7E;
 }
-.fonctionality__box .icon3 {
+.fonctionality .icon3 {
   color: #9356dc;
 }
-.fonctionality__box .fonctionality__button {
+.fonctionality .fonctionality__button {
   color: white;
   background-color: #9356dc;
+  border: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -133,6 +169,12 @@
   position: absolute;
   left: 10px;
 }
+@media screen and (min-width: 1024px) {
+  .fonctionality .fonctionality__button {
+    position: relative;
+    left: -50px;
+  }
+}
 
 .footer {
   padding-left: 20px;
@@ -140,20 +182,41 @@
   background-color: #353535;
   padding-top: 30px;
   padding-bottom: 30px;
-  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 250px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
 }
 .footer__title {
   color: white;
   padding-left: 40px;
   font-family: shrikhand;
 }
+@media screen and (min-width: 1024px) {
+  .footer__title {
+    position: absolute;
+    right: 50px;
+    top: 42px;
+  }
+}
 .footer__list1 {
-  color: red;
   list-style-type: none;
 }
 .footer__list2 {
   color: white;
   list-style-type: none;
+}
+@media screen and (min-width: 1024px) {
+  .footer__list2 {
+    margin-left: -30px;
+  }
 }
 .footer__list3 {
   color: white;
@@ -161,6 +224,12 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .footer__list3 {
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 .footer__link {
   color: white;
@@ -184,6 +253,11 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant__img {
+    height: 170px;
+  }
+}
 .restaurant__box {
   display: flex;
   flex-direction: column;
@@ -191,6 +265,17 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 60px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 30px;
+  }
 }
 .restaurant__article {
   display: flex;
@@ -202,14 +287,33 @@
   position: relative;
   min-height: 220px;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant__article {
+    width: 490px;
+    height: 251px;
+  }
+}
 .restaurant__link {
   width: 100%;
   text-decoration: none;
   color: black;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant__link {
+    width: 490px;
+    height: 251px;
+  }
+}
 .restaurant__title {
   padding-left: 15px;
   padding-top: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__title {
+    display: flex;
+    justify-content: center;
+    margin-left: -400px;
+  }
 }
 .restaurant__content {
   margin-left: 15px;

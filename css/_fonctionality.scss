@@ -12,6 +12,12 @@
             font-weight: 700;
             padding-top: 30px;
             padding-left: 20px;
+            @media screen and (min-width: 1024px) {
+                margin-left:-380px;   
+                display: flex;
+                justify-content:center;
+            }
+            
         }
 
         &__article {
@@ -21,8 +27,16 @@
             padding-bottom: 50px;
             padding-left: 20px;
             padding-right: 20px;
-        }
-
+            @media screen and (min-width: 1024px) {
+                flex-direction: row;
+                justify-content: center;
+                gap:60px;
+                padding-left:0px;
+                     
+            }
+         
+            }
+        
         &__link {
             text-decoration: none;
         }
@@ -39,20 +53,27 @@
             padding: 20px;
             color: black;
             text-decoration: none;
-
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                }
+            }
+            
              i {
             margin-left: -30px;
             padding-right: 30px;
             color: #7E7E7E;
+            @media screen and (min-width: 1024px) {
+                
+            }
         }
 
         .icon3 {
-            color:$purple-color;
+            color:#9356dc;
         }
     
             .fonctionality__button {
                 color: white;
-                background-color:$purple-color;
+                background-color:#9356dc;
                 border: none;
                 border-radius: 50%;
                 display: flex;
@@ -62,10 +83,13 @@
                 height: 24px;
                 position:absolute;
                 left: 10px;
-
-
+                @media screen and (min-width: 1024px) {
+                    position: relative;
+                    left: -50px;
+                }
+                
             }
         }
-    }
+    
 
        

@@ -10,6 +10,10 @@
         justify-content: center;
         text-align: center;
         padding-bottom: 50px;
+        @media screen and (min-width: 1024px)  {
+            padding-bottom:30px;
+            
+        }
         
     }
 /*Éléments*/
@@ -18,7 +22,11 @@
         font-weight: bold;
         margin-top: 30px;
         padding-left:50px;
-        padding-right:50px;   
+        padding-right:50px; 
+        @media screen and (min-width: 1024px)  {
+           font-size: 40px;
+            
+        }  
     }
         .reservation__paragraph {
             font-size: 18px;
@@ -26,6 +34,10 @@
             color:#353525;
             padding-left:10px;
             padding-right:10px;
+            @media screen and (min-width:1024px) {
+
+                
+            }
     }
 
     .reservation__button {
