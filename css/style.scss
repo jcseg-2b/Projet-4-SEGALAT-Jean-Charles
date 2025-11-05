@@ -3,6 +3,7 @@
 @use 'fonctionality';
 @use 'footer';
 @use 'restaurant';
+@use 'loader';
 
 
 html, body {
@@ -11,6 +12,7 @@ html, body {
     width: 100%;;
     font-family: roboto;
 }
+
 
 * {
 
