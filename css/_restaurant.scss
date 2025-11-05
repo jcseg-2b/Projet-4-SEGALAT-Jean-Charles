@@ -28,11 +28,14 @@
         @media screen and (min-width: 1024px) {
           display: grid;
             grid-template-columns: repeat(2, 1fr); 
-            justify-items: center;
-            margin: 0 auto;  
-            padding:0;
-            margin:0;
-            padding-bottom: 30px;
+            justify-items: center; 
+            align-self:center;
+           gap:30px;
+           padding-left: 0;
+           padding-right: 0;
+              
+              
+                 
         }
         
         }
@@ -57,7 +60,7 @@
         text-decoration: none;
         color: black;
         @media screen and (min-width: 1024px)  {
-            width: 490px;
+            width:auto;
             height: 251px;   
         }
         
@@ -69,7 +72,7 @@
         @media screen and (min-width: 1024px) {
             display: flex;
             justify-content:center;
-            margin-left:-400px;
+            margin-left:-460px;
             
         } 
     }
