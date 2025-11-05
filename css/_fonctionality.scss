@@ -1,7 +1,10 @@
 @use 'variables';
-    /*2 eme section*/
+
+/*fonctionality section*/
 
     .fonctionality {
+        
+/*eléments*/        
         &-section {
             display: flex;
             flex-direction: column;
@@ -30,7 +33,7 @@
             @media screen and (min-width: 1024px) {
                 flex-direction: row;
                 justify-content: center;
-                gap:60px;
+                gap:70px;
                 padding-left:0px;
                      
             }

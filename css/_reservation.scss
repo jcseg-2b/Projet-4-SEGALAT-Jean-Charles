@@ -1,7 +1,4 @@
-
-
-
-/*1 ere section*/
+/*Section Réservation*/
     .reservation-section {
         display: flex;
        background-color:#f6f6f6;
@@ -11,10 +8,8 @@
         text-align: center;
         padding-bottom: 50px;
         @media screen and (min-width: 1024px)  {
-            padding-bottom:30px;
-            
-        }
-        
+            padding-bottom:30px;   
+        } 
     }
 /*Éléments*/
     .reservation__title {
@@ -34,9 +29,8 @@
             color:#353525;
             padding-left:10px;
             padding-right:10px;
-            @media screen and (min-width:1024px) {
+            @media screen and (min-width:1024px) {  
 
-                
             }
     }
 
