@@ -209,6 +209,16 @@
   padding-bottom: 30px;
   /*éléments*/
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0px;
+    position: relative;
+    padding-top: 40px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .footer {
     display: flex;
@@ -224,6 +234,12 @@
   color: white;
   padding-left: 40px;
   font-family: shrikhand;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer__title {
+    position: absolute;
+    top: 1px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .footer__title {
@@ -250,6 +266,11 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer__list3 {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 1024px) {
   .footer__list3 {

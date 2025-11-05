@@ -5,6 +5,15 @@
     background-color: #353535;
     padding-top:30px;
     padding-bottom:30px;
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+       padding-left:0px;
+       position: relative;
+         padding-top:40px;
+    
+    }
     @media screen and (min-width: 1024px) {
         display: flex;
         flex-direction: row;
@@ -20,6 +29,12 @@
         color:white;
         padding-left:40px;
         font-family: shrikhand;
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            position: absolute;
+            top:1px;
+            
+        
+        }
         @media screen and (min-width: 1024px) {
             position: absolute;
             right:50px;
@@ -46,6 +61,11 @@
         display: flex;
         gap:10px;
         flex-direction: column;
+        @media screen and (min-width:768px) and (max-width:1023px) {
+            flex-direction: row;
+            
+            
+        }
         @media screen and (min-width: 1024px) {
             flex-direction: row;
             gap:20px;
