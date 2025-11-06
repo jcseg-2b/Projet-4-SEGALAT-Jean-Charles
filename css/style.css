@@ -451,7 +451,7 @@
   display: none;
 }
 .restaurant__heart-label {
-  cursor: pointer;
+  cursor: grab;
   position: relative;
 }
 .restaurant__heart-label .fa-heart {
