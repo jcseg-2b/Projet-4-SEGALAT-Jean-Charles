@@ -1,0 +1,15 @@
+@use 'header2';
+@use 'restaurant2';
+
+html, body {
+    padding:0;
+    margin:0;
+    width: 100%;;
+    font-family: roboto;
+}
+
+
+* {
+
+    max-width: 100%;
+}

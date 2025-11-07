@@ -1,0 +1,47 @@
+.header__container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.header__logo {
+  width: 200px;
+  margin: auto;
+  display: block;
+  padding: 20px;
+}
+.header__icon {
+  color: black;
+  padding-left: 30px;
+}
+
+.restaurant__section {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -80px;
+  z-index: 1;
+  position: relative;
+  background-color: white;
+}
+.restaurant__section .restaurant__title {
+  font-family: "shrikhand";
+  padding-top: 30px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  padding-left: 15px;
+}
+.restaurant__section .restaurant__button {
+  position: absolute;
+  top: 37px;
+  left: 280px;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: roboto;
+}
+
+* {
+  max-width: 100%;
+}/*# sourceMappingURL=style2.css.map */
