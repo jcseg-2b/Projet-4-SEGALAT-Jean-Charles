@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header__container {
   display: flex;
   flex-direction: row-reverse;
@@ -20,7 +21,7 @@
   margin-top: -80px;
   z-index: 1;
   position: relative;
-  background-color: white;
+  background-color: #f6f6f6;
 }
 .restaurant__section .restaurant__title {
   font-family: "shrikhand";
@@ -35,11 +36,229 @@
   left: 280px;
 }
 
+/*entrées*/
+.entrees__link {
+  text-decoration: none;
+  color: inherit;
+}
+.entrees__title {
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+.entrees__article {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 15px;
+}
+.entrees__box {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.entrees__description {
+  padding-left: 15px;
+}
+.entrees__name {
+  margin-bottom: -10px;
+}
+.entrees__price {
+  padding-top: 30px;
+  padding-right: 15px;
+}
+
+.plats__link {
+  text-decoration: none;
+  color: inherit;
+}
+.plats__title {
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+.plats__article {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 15px;
+}
+.plats__box {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.plats__description {
+  padding-left: 15px;
+}
+.plats__name {
+  margin-bottom: -10px;
+}
+.plats__price {
+  padding-top: 30px;
+  padding-right: 15px;
+}
+
+.desserts__link {
+  text-decoration: none;
+  color: inherit;
+}
+.desserts__title {
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+.desserts__article {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 15px;
+}
+.desserts__box {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.desserts__description {
+  padding-left: 15px;
+}
+.desserts__name {
+  margin-bottom: -10px;
+}
+.desserts__price {
+  padding-top: 30px;
+  padding-right: 15px;
+}
+.desserts__link-button {
+  text-decoration: none;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 30px;
+  width: 150px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 10px;
+}
+
+.desserts-button {
+  display: flex;
+  justify-content: center;
+}
+
+/*footer section*/
+.footer {
+  background-color: #353535;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /*éléments*/
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0px;
+    position: relative;
+    padding-top: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 250px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+}
+.footer__title {
+  color: white;
+  padding-left: 40px;
+  font-family: shrikhand;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer__title {
+    position: absolute;
+    top: 1px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__title {
+    position: absolute;
+    right: 50px;
+    top: 42px;
+  }
+}
+.footer__list1 {
+  list-style-type: none;
+}
+.footer__list2 {
+  color: white;
+  list-style-type: none;
+}
+@media screen and (min-width: 1024px) {
+  .footer__list2 {
+    margin-left: -30px;
+  }
+}
+.footer__list3 {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer__list3 {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__list3 {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+.footer i {
+  color: white;
+  padding-right: 10px;
+}
+
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
   font-family: roboto;
+}
+
+main {
+  background-color: #f6f6f6;
 }
 
 * {
