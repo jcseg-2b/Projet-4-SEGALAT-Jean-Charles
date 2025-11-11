@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
     background-color: #f6f6f6;
+    @media screen and (min-width: 1024px)  {
+       padding-left:130px;
+       padding-right:130px;
+    }
 
 /*eléments*/
     &__img{
@@ -33,9 +37,10 @@
             grid-template-columns: repeat(2, 1fr); 
             justify-items: center; 
             align-self:center;
-           gap:30px;
-           padding-left: 0;
-           padding-right: 0;      
+           gap:30px 8%;
+           margin-left:15px;
+           margin-right:15px;   
+           width: 100%;   
                  
         }
         
@@ -57,7 +62,7 @@
             
         }
         @media screen and (min-width: 1024px)  {
-            width: 490px;
+            width: 100%;
             height: 251px;
             
         }  
@@ -68,7 +73,7 @@
         text-decoration: none;
         color: black;
         @media screen and (min-width: 1024px)  {
-            width:auto;
+            width: 100%;
             height: 251px;   
         }
         
@@ -85,8 +90,9 @@
         }
         @media screen and (min-width: 1024px) {
             display: flex;
-            justify-content:center;
-            margin-left:-460px;
+            justify-content:left;
+            padding-left:0;
+           
             
         } 
     }
@@ -138,8 +144,8 @@
                 -webkit-background-clip: text;
                 color: transparent;
                 opacity: 0;
-                transform: translateY(100%);
-                transition: all 0.3s ease;
+                transform: fadeInUp(100%);
+                transition: all 0.6s ease;
             }
         }
     }
