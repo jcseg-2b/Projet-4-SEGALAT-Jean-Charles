@@ -10,9 +10,16 @@ html, body {
     margin:0;
     width: 100%;
     font-family: roboto;
+    max-width: 1440px;
 }
 main{
     background-color: #f6f6f6;
+    @media screen and (min-width:768px) {
+        padding-left:100px;
+        padding-right:100px;
+        background-color: white;
+        
+    }
 }
 
 

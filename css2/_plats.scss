@@ -1,4 +1,18 @@
 .plats {
+     @media screen and (min-width:768px) and (max-width:1023px) {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        background-color: #f6f6f6;
+    }
+    @media screen and (min-width:1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        background-color: #f6f6f6;
+        
+    }
 
     &__link {
         text-decoration: none;
@@ -18,8 +32,12 @@
         padding-left:20px;
         padding-right:20px;
         gap:15px;
-        
+        @media  screen and (min-width:768px) {
+            width: 60%;
+            margin:auto; 
+        }
     }
+
     &__box {
         display: flex;
         justify-content: space-between;
@@ -40,3 +58,6 @@
        padding-right:15px;
     }
 }
+
+
+
