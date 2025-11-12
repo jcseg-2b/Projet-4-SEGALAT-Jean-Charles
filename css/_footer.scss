@@ -5,6 +5,7 @@
     background-color: #353535;
     padding-top:30px;
     padding-bottom:30px;
+
     @media screen and (min-width: 768px) and (max-width: 1023px){
         display: flex;
         flex-direction: row;
@@ -12,8 +13,8 @@
        padding-left:0px;
        position: relative;
          padding-top:40px;
-    
     }
+
     @media screen and (min-width: 1024px) {
         display: flex;
         flex-direction: row;
@@ -22,8 +23,8 @@
         position: relative;
         padding-top:50px;
         padding-bottom:10px;
-    
     }
+    
 /*éléments*/    
     &__title{
         color:white;
@@ -32,30 +33,28 @@
         @media screen and (min-width: 768px) and (max-width: 1023px) {
             position: absolute;
             top:1px;
-            
-        
         }
+
         @media screen and (min-width: 1024px) {
             position: absolute;
             right:50px;
-            top:42px;
-            
+            top:42px;  
         }
     }
 
     &__list1{
         list-style-type: none;   
-       
-}
+       }
+
     &__list2{
         color:white;
         list-style-type: none;
         @media screen and (min-width: 1024px) {
-            margin-left:-30px;
-            
+            margin-left:-30px;  
         }
     }
-    &__list3{
+
+    &__list3 {
         color:white;
         list-style-type: none;
         display: flex;
@@ -63,24 +62,21 @@
         flex-direction: column;
         @media screen and (min-width:768px) and (max-width:1023px) {
             flex-direction: row;
-            gap:30px;
-            
-            
+            gap:30px;   
         }
+
         @media screen and (min-width: 1024px) {
             flex-direction: row;
-            gap:20px;
-            
+            gap:20px;  
         }
     }
   
     &__link{
-      
         color:white;
         text-decoration: none;
     }
 
-    i{
+    i {
         color:white;
         padding-right: 10px;
     }
