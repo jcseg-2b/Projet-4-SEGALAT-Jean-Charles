@@ -1,92 +1,111 @@
 .desserts {
-     @media screen and (min-width:768px) and (max-width:1023px) {
-        display: flex;
-        flex-direction: column;
-        align-items:center;
-        justify-content: center;
-        background-color: #f6f6f6;
-    }
-    @media screen and (min-width:1024px) {
-        display: flex;
-        flex-direction: column;
-        align-items:center;
-        background-color: #f6f6f6;
-        
-    }
+  background-color: #f6f6f6;
 
-    &__link {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    &__title {
-        font-size:18px;
-        font-weight: 300;
-        padding-left:15px;
-        padding-top: 20px;
-    }
-
-    &__article {
-        display: flex;
-        flex-direction: column;
-        padding-left:20px;
-        padding-right:20px;
-        gap:15px;
-        @media  screen and (min-width:768px) {
-            width: 60%;
-            margin:auto; 
-        }
-    }
-
-    &__box {
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        border-radius: 20px;
-        gap:10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    &__description {
-       padding-left: 15px;
-    }
-    &__name {
-        margin-bottom:-10px;
-    }
-    &__price {
-       padding-top:30px;
-       padding-right:15px;
-    }
-
-    &__link-button {
-        text-decoration: none;
-        margin-top:40px;
-        margin-bottom:40px;
-        border-radius: 30px;
-        width: 150px;
-        text-align: center;
-        background: linear-gradient(to bottom, #ff79da, #9356dc);
-        color: white;
-        padding: 15px 30px;
-        font-size: 16px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        top:10px;
-        transition: all 0.3s ease;
-
-        &:hover{
-        opacity: 0.8;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        transform: scale(1.01);
-        }
-
-    }
-}
-.desserts-button {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    @media screen and (min-width:768px) {
-        background-color: #f6f6f6;
-        
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 20px;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 15px;
+
+    @media screen and (min-width: 768px) {
+      width: 60%;
+      margin: auto;
     }
+  }
+
+  /* Animation glissante depuis la gauche */
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 0.8s ease forwards;
+    animation-delay:2.5s;
+  }
+
+  &__description {
+    padding-left: 15px;
+  }
+
+  &__name {
+    margin-bottom: -10px;
+  }
+
+  &__price {
+    padding-top: 30px;
+    padding-right: 15px;
+  }
+
+  &__link-button {
+    text-decoration: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    width: 150px;
+    text-align: center;
+    background: linear-gradient(to bottom, #ff79da, #9356dc);
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transform: scale(1.01);
+    }
+  }
+}
+
+.desserts-button {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    background-color: #f6f6f6;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 

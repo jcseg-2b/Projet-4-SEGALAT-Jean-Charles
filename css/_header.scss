@@ -1,4 +1,4 @@
-@import 'mixin';
+
 /*header section*/
  .header {
     
@@ -21,7 +21,8 @@
         justify-content: center;
         background-color: #eaeaea;
         padding: 1rem;
-        @include box-shadows;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 4px 6px rgba(0, 0, 0, 0.1);;
         position: relative;
         @media screen and (min-width: 1024px) {
             box-shadow: none;
