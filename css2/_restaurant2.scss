@@ -53,7 +53,7 @@
 
       &::before {
         content: "\f004";
-        font-weight: 400; // Regular
+        font-weight: 400;
       }
 
       &::after {
@@ -61,7 +61,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        font-weight: 700; // Bold
+        font-weight: 700; 
         background: linear-gradient(#9356DC, #FF79DA);
         -webkit-background-clip: text;
         color: transparent;
@@ -72,7 +72,6 @@
     }
   }
 
-  // Animation à l'état checked
   @media screen and (max-width: 1023px) {
     .restaurant__heart-checkbox:checked + .restaurant__heart-label .fa-heart::after {
       opacity: 1;
@@ -80,7 +79,6 @@
     }
   }
 
-  // Animation au hover sur desktop
   @media screen and (min-width: 768px) {
     .restaurant__heart-label:hover .fa-heart::after {
       opacity: 1;

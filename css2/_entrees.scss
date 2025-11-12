@@ -47,14 +47,11 @@
     gap: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    /* état initial */
     opacity: 0;
-    transform: translateX(-30px); // vient de la gauche
     animation: fadeInLeft 0.8s ease forwards;
     animation-delay:0.5s ;
   }
 
-  
   &__description {
     padding-left: 15px;
   }
