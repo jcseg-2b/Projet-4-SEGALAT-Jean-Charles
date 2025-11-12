@@ -38,7 +38,7 @@
     align-items: center;
   }
 }
-.restaurant .restaurant__title {
+.restaurant__title {
   font-family: "Shrikhand";
   padding-top: 30px;
   margin-bottom: 16px;
@@ -46,39 +46,39 @@
   padding-left: 25px;
 }
 @media screen and (min-width: 768px) {
-  .restaurant .restaurant__title {
+  .restaurant__title {
     padding-left: 0;
   }
 }
-.restaurant .restaurant__button {
+.restaurant__button {
   position: absolute;
   top: 50px;
   right: 50px;
 }
 @media screen and (min-width: 768px) {
-  .restaurant .restaurant__button {
+  .restaurant__button {
     position: relative;
     top: 13px;
     right: -30px;
   }
 }
-.restaurant .restaurant__heart-checkbox {
+.restaurant__heart-checkbox {
   display: none;
 }
-.restaurant .restaurant__heart-label {
+.restaurant__heart-label {
   cursor: grab;
   position: relative;
 }
-.restaurant .restaurant__heart-label .fa-heart {
+.restaurant__heart-label .fa-heart {
   font-size: 24px;
   position: relative;
   transition: all 0.3s ease;
 }
-.restaurant .restaurant__heart-label .fa-heart::before {
+.restaurant__heart-label .fa-heart::before {
   content: "\f004";
   font-weight: 400;
 }
-.restaurant .restaurant__heart-label .fa-heart::after {
+.restaurant__heart-label .fa-heart::after {
   content: "\f004";
   position: absolute;
   top: 0;
@@ -123,6 +123,12 @@
     align-items: center;
   }
 }
+.entrees__bar {
+  background-color: #81fcd7;
+  width: 50px;
+  height: 5px;
+  margin-top: -20px;
+}
 .entrees__link {
   text-decoration: none;
   color: inherit;
@@ -138,6 +144,9 @@
   padding-left: 20px;
   padding-right: 20px;
   gap: 15px;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+  animation-delay: 0.5s;
 }
 @media screen and (min-width: 768px) {
   .entrees__article {
@@ -152,9 +161,6 @@
   border-radius: 20px;
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeInLeft 0.8s ease forwards;
-  animation-delay: 0.5s;
 }
 .entrees__description {
   padding-left: 15px;
@@ -197,6 +203,12 @@
     align-items: center;
   }
 }
+.plats__bar {
+  background-color: #81fcd7;
+  width: 50px;
+  height: 5px;
+  margin-top: -20px;
+}
 .plats__link {
   text-decoration: none;
   color: inherit;
@@ -212,6 +224,9 @@
   padding-left: 20px;
   padding-right: 20px;
   gap: 15px;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+  animation-delay: 1.5s;
 }
 @media screen and (min-width: 768px) {
   .plats__article {
@@ -226,9 +241,6 @@
   border-radius: 20px;
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeInRight 0.8s ease forwards;
-  animation-delay: 1.5s;
 }
 .plats__description {
   padding-left: 15px;
@@ -270,6 +282,12 @@
     align-items: center;
   }
 }
+.desserts__bar {
+  background-color: #81fcd7;
+  width: 50px;
+  height: 5px;
+  margin-top: -20px;
+}
 .desserts__link {
   text-decoration: none;
   color: inherit;
@@ -285,6 +303,9 @@
   padding-left: 20px;
   padding-right: 20px;
   gap: 15px;
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+  animation-delay: 2.5s;
 }
 @media screen and (min-width: 768px) {
   .desserts__article {
@@ -299,9 +320,6 @@
   border-radius: 20px;
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeInLeft 0.8s ease forwards;
-  animation-delay: 2.5s;
 }
 .desserts__description {
   padding-left: 15px;

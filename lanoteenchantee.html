@@ -22,7 +22,7 @@
         <img class="header__logo" src="images/logo/ohmyfood.png" alt="Logo-ohmyfood">
         <div class="header__form">
         <div class="header__icon">  
-            <i class="fa-solid fa-arrow-left"></i>
+            <a class="header__link" href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
         </div>
         </div>
     </div>
@@ -31,26 +31,26 @@
 
 <body>
 
-    <main class="main">
-        <section class="restaurant__section">
-            <h1 class="restaurant__title">La note enchantée</h1>
+    <main>
+        <section class="restaurant">
+        <div class="restaurant-section">
+            <h1 class="restaurant__title">La note enchanté</h1>
             <div class="restaurant__button">
                 <input type="checkbox" id="heart1" class="restaurant__heart-checkbox">
                 <label for="heart1" class="restaurant__heart-label">
                 <i class="fa-regular fa-heart"></i>
                 </label>
             </div>
-        </section>
-
-
-
-        <section class="entrees">
-            <h2 class="entrees__title">ENTRÉES</h2>
-            <a  class="entrees__link" href="#">
+        </div>
+        
+        <div class="entrees">
             <article class="entrees__article">
+                <h2 class="entrees__title">ENTRÉES</h2>
+                <div class="entrees__bar"></div>
+                <a  class="entrees__link" href="#">
                 <div class="entrees__box">
                     <div class="entrees__description">
-                        <h3 class="entrees__name">Ravioles de foie gras</h3>
+                        <h3 class="entrees__name">Raviole de foie gras</h3>
                         <p class="entrees__detail">Accompagnées de leur crème à la truffe</p>
                     </div>
                     <p class="entrees__price">25€</p>
@@ -77,19 +77,20 @@
                 <a class="entrees__link" href="#">  
                 <div class="entrees__box">
                     <div class="entrees__description">
-                        <h3 class="entrees__name">Foie gras de canard cuit entier</h3>
-                        <p class="entrees__detail">Confiture de figue et pain toasté</p>
+                        <h3 class="entrees__name">Foie gras de canrd cuit entier</h3>
+                        <p class="entrees__detail">Confiture de figue et pain tosté</p>
                     </div>
                     <p class="entrees__price">35€</p>
                 </div>
                 </a>
             </article>
-        </section>
+        </div>
 
-                <section class="plats">
-            <h2 class="plats__title">PLATS</h2>
-            <a  class="plats__link" href="#">
+        <div class="plats">
             <article class="plats__article">
+                <h2 class="plats__title">PLATS</h2>
+                <div class="plats__bar"></div>
+                <a  class="plats__link" href="#">
                 <div class="plats__box">
                     <div class="plats__description">
                         <h3 class="plats__name">Noix de coquille Saint-Jacques</h3>
@@ -110,19 +111,20 @@
                 <a class="plats__link" href="#">  
                 <div class="plats__box">
                     <div class="plats__description">
-                        <h3 class="plats__name">Mijoté de queue de bœuf</h3>
-                        <p class="plats__detail">Et riz sauvage aux zeste de citron</p>
+                        <h3 class="plats__name">Mijoté de queue de boeuf</h3>
+                        <p class="plats__detail">Et riz sauvage aux zestes de citron</p>
                     </div>
                     <p class="plats__price">45€</p>
                 </div>
                 </a>
             </article>
-        </section>
+        </div>
 
-                <section class="desserts">
-            <h2 class="desserts__title">DESSERTS</h2>
-            <a  class="desserts__link" href="#">
+        <div class="desserts">
             <article class="desserts__article">
+                <h2 class="desserts__title">DESSERTS</h2>
+                <div class="desserts__bar"></div>
+                 <a  class="desserts__link" href="#">
                 <div class="desserts__box">
                     <div class="desserts__description">
                         <h3 class="desserts__name">Macaron noisette et chocolat</h3>
@@ -150,15 +152,16 @@
                 </div>
                 </a>
             </article>
-        </section>
+        </div>
 
 
 
-        <section class=" desserts-button">
+        <div class=" desserts-button">
             <a href="#" class="desserts__link-button">Commander</a>
-        </section>
+        </div>
+    </section>
     </main>
-    </body>
+</body>
 
     <footer class="footer">
     <h3 class="footer__title">ohmyfood</h3>
