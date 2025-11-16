@@ -1,86 +1,114 @@
-.plats {
-  background-color: #f6f6f6;
-
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media screen and (min-width: 1024px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.dish {
   
-  &__bar {
-   background-color:#81fcd7;
-   width: 50px;
-   height: 5px;
-   margin-top:-20px;
+  opacity: 0;
+  animation: slideInFromLeft 0.6s ease-out forwards;
+  animation-delay: 0.9s;
+  
+@media screen and (min-width: 768px)  {
+display: flex;
+flex-direction: column;
+justify-content: center;
   }
 
-  &__link {
-    text-decoration: none;
-    color: inherit;
+&__bar {
+background-color:#81fcd7;
+width: 50px;
+height: 5px;
+margin-top:-10px;
+margin-left:15px;
+@media screen and (min-width:768px){
+  margin-left:25px;
+  margin-bottom:10px;
   }
-
-  &__title {
-    font-size: 18px;
-    font-weight: 300;
-    padding-top: 20px;
   }
-  /* Animation glissante depuis la droite */
-  &__article {
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
-    gap: 15px;
-    opacity: 0;
-    animation: fadeInLeft 0.8s ease forwards;
-    animation-delay:1.5s;
-
-    @media screen and (min-width: 768px) {
-      width: 60%;
-      margin: auto;
+&__link {
+text-decoration: none;
+color: inherit;
+  }
+&__title {
+font-size: 18px;
+font-weight: 300;
+padding-top: 20px;
+margin-left:15px;
+@media screen and (min-width:768px){
+  margin-left:25px;
+}
+  }
+/* 💫 Animation glissante */
+.dish {
+display: flex;
+flex-direction: column;
+padding-left: 20px;
+padding-right: 20px;
+gap: 15px;
+@media screen and (min-width: 768px) {
+width: 60%;
+margin: auto;
     }
   }
-
-  
-  &__box {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 20px;
-    gap: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  &__description {
-    padding-left: 15px;
-  }
-
-  &__name {
-    margin-bottom: -10px;
-  }
-
-  &__price {
-    padding-top: 30px;
-    padding-right: 15px;
-  }
+.content {
+display: flex;
+flex-direction: column;
+background-color: white;
+border-radius: 20px;
+gap: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 10px 10px;
+width: 90%;
+overflow: hidden;
+position: relative;
+margin: 15px auto;
+@media screen and (min-width:768px){
+  margin: 7px auto;
 }
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
-
-
+.name {
+margin-bottom: -15px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
+}
+.content p {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
+}
+.price {
+text-align: right;
+margin-top: -60px;
+padding-right: 10px;
+transition: transform 200ms ease-in-out;
+white-space: nowrap; /* Empêche le prix de passer à la ligne */
+}
+.checkbox {
+display: flex;
+background-color: #81fcd7;
+color: white;
+width: 0;
+height: 100%;
+justify-content: center;
+align-items: center;
+transition: width 200ms ease-in-out;
+position: absolute;
+right: 0;
+top: 0;
+overflow: hidden;
+border-radius: 0 20px 20px 0;
+}
+.checkbox i {
+font-size: 20px;
+}
+.content:hover .checkbox {
+width: 60px;
+}
+.content:hover .price {
+transform: translateX(-60px);
+}
+/* En hover, le texte a plus d'espace car le prix se décale */
+.content:hover .name,
+.content:hover p {
+max-width: calc(100% - 130px); /* Prix décalé + checkbox */
+}
+}

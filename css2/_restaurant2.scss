@@ -16,36 +16,35 @@
   }
 
   &__title {
-    font-family: 'Shrikhand';
+    font-family: "Shrikhand";
     padding-top: 30px;
     margin-bottom: 16px;
     font-size: 24px;
-    padding-left: 25px;
+    margin-left: 15px;
 
-    @media screen and (min-width:768px) {
-        padding-left:0;
+    @media screen and (min-width: 768px) {
+      padding-left: 0;
     }
   }
 
   &__button {
     position: absolute;
-    top:50px;
+    top: 50px;
     right: 50px;
-    
- @media screen and (min-width: 768px) { 
-    position: relative;
-    top: 13px;
-    right:-30px;
+
+    @media screen and (min-width: 768px) {
+      position: relative;
+      top: 13px;
+      right: -30px;
     }
-   
-}
+  }
 
   &__heart-checkbox {
     display: none;
   }
 
   &__heart-label {
-    cursor: grab;
+    cursor: pointer;
     position: relative;
 
     .fa-heart {
@@ -63,19 +62,21 @@
         position: absolute;
         top: 0;
         left: 0;
-        font-weight: 700; 
-        background: linear-gradient(#9356DC, #FF79DA);
+        font-weight: 700;
+        background: linear-gradient(#9356dc, #ff79da);
         -webkit-background-clip: text;
         color: transparent;
         opacity: 0;
-        transform: translateY(10px);
+        transform: fadeIn(100%);
         transition: all 0.6s ease;
       }
     }
   }
 
   @media screen and (max-width: 1023px) {
-    .restaurant__heart-checkbox:checked + .restaurant__heart-label .fa-heart::after {
+    .restaurant__heart-checkbox:checked
+      + .restaurant__heart-label
+      .fa-heart::after {
       opacity: 1;
       transform: translateY(0);
     }

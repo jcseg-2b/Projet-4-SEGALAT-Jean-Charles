@@ -43,7 +43,7 @@
   padding-top: 30px;
   margin-bottom: 16px;
   font-size: 24px;
-  padding-left: 25px;
+  margin-left: 15px;
 }
 @media screen and (min-width: 768px) {
   .restaurant__title {
@@ -66,7 +66,7 @@
   display: none;
 }
 .restaurant__heart-label {
-  cursor: grab;
+  cursor: pointer;
   position: relative;
 }
 .restaurant__heart-label .fa-heart {
@@ -84,11 +84,11 @@
   top: 0;
   left: 0;
   font-weight: 700;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transform: translateY(10px);
+  transform: fadeIn(100%);
   transition: all 0.6s ease;
 }
 @media screen and (max-width: 1023px) {
@@ -104,274 +104,412 @@
   }
 }
 
-.entrees {
-  background-color: #f6f6f6;
+.starter {
+  opacity: 0;
+  animation: slideInFromLeft 0.6s ease-out forwards;
+  animation-delay: 0.3s;
   /* 💫 Animation glissante */
+  /* En hover, le texte a plus d'espace car le prix se décale */
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .entrees {
+@media screen and (min-width: 768px) {
+  .starter {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
 }
-@media screen and (min-width: 1024px) {
-  .entrees {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.entrees__bar {
+.starter__bar {
   background-color: #81fcd7;
   width: 50px;
   height: 5px;
-  margin-top: -20px;
+  margin-top: -10px;
+  margin-left: 15px;
 }
-.entrees__link {
+@media screen and (min-width: 768px) {
+  .starter__bar {
+    margin-left: 25px;
+  }
+}
+.starter__link {
   text-decoration: none;
   color: inherit;
 }
-.entrees__title {
+.starter__title {
   font-size: 18px;
   font-weight: 300;
   padding-top: 20px;
+  margin-left: 15px;
 }
-.entrees__article {
+@media screen and (min-width: 768px) {
+  .starter__title {
+    padding-top: 0px;
+    margin-left: 25px;
+  }
+}
+.starter .starter {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
   gap: 15px;
-  opacity: 0;
-  animation: fadeInLeft 0.8s ease forwards;
-  animation-delay: 0.5s;
 }
 @media screen and (min-width: 768px) {
-  .entrees__article {
+  .starter .starter {
     width: 60%;
     margin: auto;
   }
 }
-.entrees__box {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  border-radius: 20px;
-  gap: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.entrees__description {
-  padding-left: 15px;
-}
-.entrees__name {
-  margin-bottom: -10px;
-}
-.entrees__price {
-  padding-top: 30px;
-  padding-right: 15px;
-}
-
-/* 🌈 Animation latérale (de gauche vers la droite) */
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.plats {
-  background-color: #f6f6f6;
-  /* Animation glissante depuis la droite */
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .plats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .plats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.plats__bar {
-  background-color: #81fcd7;
-  width: 50px;
-  height: 5px;
-  margin-top: -20px;
-}
-.plats__link {
-  text-decoration: none;
-  color: inherit;
-}
-.plats__title {
-  font-size: 18px;
-  font-weight: 300;
-  padding-top: 20px;
-}
-.plats__article {
+.starter .content {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
-  gap: 15px;
-  opacity: 0;
-  animation: fadeInLeft 0.8s ease forwards;
-  animation-delay: 1.5s;
-}
-@media screen and (min-width: 768px) {
-  .plats__article {
-    width: 60%;
-    margin: auto;
-  }
-}
-.plats__box {
-  display: flex;
-  justify-content: space-between;
   background-color: white;
   border-radius: 20px;
   gap: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px;
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+  margin: 15px auto;
 }
-.plats__description {
-  padding-left: 15px;
-}
-.plats__name {
-  margin-bottom: -10px;
-}
-.plats__price {
-  padding-top: 30px;
-  padding-right: 15px;
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+@media screen and (min-width: 768px) {
+  .starter .content {
+    margin: 7px auto;
   }
 }
-.desserts {
-  background-color: #f6f6f6;
-  /* Animation glissante depuis la gauche */
+.starter .name {
+  margin-bottom: -15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .desserts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.starter .content p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
 }
-@media screen and (min-width: 1024px) {
-  .desserts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.starter .price {
+  text-align: right;
+  margin-top: -60px;
+  padding-right: 10px;
+  transition: transform 200ms ease-in-out;
+  white-space: nowrap; /* Empêche le prix de passer à la ligne */
 }
-.desserts__bar {
+.starter .checkbox {
+  display: flex;
   background-color: #81fcd7;
-  width: 50px;
-  height: 5px;
-  margin-top: -20px;
-}
-.desserts__link {
-  text-decoration: none;
-  color: inherit;
-}
-.desserts__title {
-  font-size: 18px;
-  font-weight: 300;
-  padding-top: 20px;
-}
-.desserts__article {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
-  gap: 15px;
-  opacity: 0;
-  animation: fadeInLeft 0.8s ease forwards;
-  animation-delay: 2.5s;
-}
-@media screen and (min-width: 768px) {
-  .desserts__article {
-    width: 60%;
-    margin: auto;
-  }
-}
-.desserts__box {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  border-radius: 20px;
-  gap: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.desserts__description {
-  padding-left: 15px;
-}
-.desserts__name {
-  margin-bottom: -10px;
-}
-.desserts__price {
-  padding-top: 30px;
-  padding-right: 15px;
-}
-.desserts__link-button {
-  text-decoration: none;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  border-radius: 30px;
-  width: 150px;
-  text-align: center;
-  background: linear-gradient(to bottom, #ff79da, #9356dc);
   color: white;
+  width: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: width 200ms ease-in-out;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+}
+.starter .checkbox i {
+  font-size: 20px;
+}
+.starter .content:hover .checkbox {
+  width: 60px;
+}
+.starter .content:hover .price {
+  transform: translateX(-60px);
+}
+.starter .content:hover .name,
+.starter .content:hover p {
+  max-width: calc(100% - 130px); /* Prix décalé + checkbox */
+}
+
+/* 🎬 Animation depuis la gauche */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.dish {
+  opacity: 0;
+  animation: slideInFromLeft 0.6s ease-out forwards;
+  animation-delay: 0.9s;
+  /* 💫 Animation glissante */
+  /* En hover, le texte a plus d'espace car le prix se décale */
+}
+@media screen and (min-width: 768px) {
+  .dish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.dish__bar {
+  background-color: #81fcd7;
+  width: 50px;
+  height: 5px;
+  margin-top: -10px;
+  margin-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  .dish__bar {
+    margin-left: 25px;
+    margin-bottom: 10px;
+  }
+}
+.dish__link {
+  text-decoration: none;
+  color: inherit;
+}
+.dish__title {
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 20px;
+  margin-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  .dish__title {
+    margin-left: 25px;
+  }
+}
+.dish .dish {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .dish .dish {
+    width: 60%;
+    margin: auto;
+  }
+}
+.dish .content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px;
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+  margin: 15px auto;
+}
+@media screen and (min-width: 768px) {
+  .dish .content {
+    margin: 7px auto;
+  }
+}
+.dish .name {
+  margin-bottom: -15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
+}
+.dish .content p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
+}
+.dish .price {
+  text-align: right;
+  margin-top: -60px;
+  padding-right: 10px;
+  transition: transform 200ms ease-in-out;
+  white-space: nowrap; /* Empêche le prix de passer à la ligne */
+}
+.dish .checkbox {
+  display: flex;
+  background-color: #81fcd7;
+  color: white;
+  width: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: width 200ms ease-in-out;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+}
+.dish .checkbox i {
+  font-size: 20px;
+}
+.dish .content:hover .checkbox {
+  width: 60px;
+}
+.dish .content:hover .price {
+  transform: translateX(-60px);
+}
+.dish .content:hover .name,
+.dish .content:hover p {
+  max-width: calc(100% - 130px); /* Prix décalé + checkbox */
+}
+
+.dessert {
+  opacity: 0;
+  animation: slideInFromLeft 0.6s ease-out forwards;
+  animation-delay: 1.5s;
+  /* 💫 Animation glissante */
+  /* En hover, le texte a plus d'espace car le prix se décale */
+}
+@media screen and (min-width: 768px) {
+  .dessert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.dessert__bar {
+  background-color: #81fcd7;
+  width: 50px;
+  height: 5px;
+  margin-top: -10px;
+  margin-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  .dessert__bar {
+    margin-left: 25px;
+    margin-bottom: 10px;
+  }
+}
+.dessert__link {
+  text-decoration: none;
+  color: inherit;
+}
+.dessert__title {
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 20px;
+  margin-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  .dessert__title {
+    margin-left: 25Px;
+  }
+}
+.dessert .dessert {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .dessert .dessert {
+    width: 60%;
+    margin: auto;
+  }
+}
+.dessert .content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px;
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+  margin: 15px auto;
+}
+@media screen and (min-width: 768px) {
+  .dessert .content {
+    margin: 7px auto;
+  }
+}
+.dessert .name {
+  margin-bottom: -15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
+}
+.dessert .content p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
+}
+.dessert .price {
+  text-align: right;
+  margin-top: -60px;
+  padding-right: 10px;
+  transition: transform 200ms ease-in-out;
+  white-space: nowrap; /* Empêche le prix de passer à la ligne */
+}
+.dessert .checkbox {
+  display: flex;
+  background-color: #81fcd7;
+  color: white;
+  width: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: width 200ms ease-in-out;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+}
+.dessert .checkbox i {
+  font-size: 20px;
+}
+.dessert .content:hover .checkbox {
+  width: 60px;
+}
+.dessert .content:hover .price {
+  transform: translateX(-60px);
+}
+.dessert .content:hover .name,
+.dessert .content:hover p {
+  max-width: calc(100% - 130px); /* Prix décalé + checkbox */
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.btn--main {
+  margin-top: 10px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
   padding: 15px 30px;
   font-size: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  top: 10px;
+  justify-content: center;
+  margin: 20px auto;
+  width: 150px;
   transition: all 0.3s ease;
 }
-.desserts__link-button:hover {
+.btn--main:hover {
   opacity: 0.8;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: scale(1.01);
 }
-
-.desserts-button {
-  display: flex;
-  justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  .desserts-button {
-    background-color: #f6f6f6;
-  }
+.btn .button-link {
+  color: white;
+  text-decoration: none;
 }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 /*footer section*/
 .footer {
   background-color: #353535;
