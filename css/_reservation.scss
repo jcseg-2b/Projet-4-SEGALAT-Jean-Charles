@@ -1,60 +1,57 @@
-@use 'variables' as *;
+@import "variables";
 
+/*reservation section*/
 .reservation {
+  &-section {
+    display: flex;
+    background-color: #f6f6f6;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
 
-    &-section {  
-        display: flex;
-        background-color: #f6f6f6;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding-bottom: 50px;
-        
-        @media screen and (min-width: 1024px) {
-            padding-bottom: 30px;
-        }
+    @media screen and (min-width: 1024px) {
+      padding-bottom: 30px;
     }
+  }
 
-/*éléments*/
-    &__title {  
-        font-size: 24px;
-        font-weight: bold;
-        margin-top: 30px;
-        padding-left: 50px;
-        padding-right: 50px;
-        
-        @media screen and (min-width: 1024px) {
-            font-size: 40px;
-        }
-    }
+  /*éléments*/
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
 
-    &__paragraph {  
-        font-size: 18px;
-        margin-top: -10px;
-        color: #353525;
-        padding-left: 10px;
-        padding-right: 10px;
+    @media screen and (min-width: 1024px) {
+      font-size: 40px;
     }
+  }
 
-    &__link {  
-        margin-top: 10px;
-        border-radius: 30px;
-        background: linear-gradient(to bottom, #ff79da, #9356dc);
-        color: white;
-        text-decoration: none;
-        padding: 15px 30px;
-        font-size: 16px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        
-        &:hover{
-        opacity: 0.8;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        transform: scale(1.01);
-        }
+  &__paragraph {
+    font-size: 18px;
+    margin-top: -10px;
+    color: #353525;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &__link {
+    margin-top: 10px;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #ff79da, #9356dc);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transform: scale(1.01);
     }
+  }
 }
-
-
-    

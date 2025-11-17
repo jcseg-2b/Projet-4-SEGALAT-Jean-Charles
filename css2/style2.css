@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*Variable générales*/
+/*header section*/
+.header {
+  /*éléments*/
+}
 .header__container {
   display: flex;
   flex-direction: row-reverse;
@@ -21,12 +26,15 @@
      object-fit: cover;
 }
 
+/*Variable générales*/
+/*restaurant section*/
 .restaurant {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #f6f6f6;
   position: relative;
   margin-top: -50px;
+  /*éléments*/
 }
 .restaurant .restaurant-section {
   display: flex;
@@ -105,10 +113,12 @@
 }
 
 /*Variable générales*/
+/*starter section*/
 .starter {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
   animation-delay: 0.3s;
+  /*éléments*/
   /* En hover, le texte a plus d'espace car le prix se décale */
 }
 @media screen and (min-width: 768px) {
@@ -240,10 +250,12 @@
   }
 }
 /*Variable générales*/
+/*dish section*/
 .dish {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
   animation-delay: 0.9s;
+  /*éléments*/
   /* 💫 Animation glissante */
   /* En hover, le texte a plus d'espace car le prix se décale */
 }
@@ -364,10 +376,12 @@
 }
 
 /*Variable générales*/
+/*dessert section*/
 .dessert {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
   animation-delay: 1.5s;
+  /*éléments*/
   /* En hover, le texte a plus d'espace car le prix se décale */
 }
 @media screen and (min-width: 768px) {
@@ -402,7 +416,7 @@
 }
 @media screen and (min-width: 768px) {
   .dessert__title {
-    margin-left: 25Px;
+    margin-left: 25px;
   }
 }
 .dessert .dessert {
@@ -515,6 +529,7 @@
   text-decoration: none;
 }
 
+/*Variable générales*/
 /*footer section*/
 .footer {
   background-color: #353535;
@@ -602,14 +617,16 @@
 }
 
 /*Variable générales*/
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   width: 100%;
   font-family: roboto;
 }
 @media screen and (min-width: 1440px) {
-  html, body {
+  html,
+  body {
     max-width: 1440px;
     margin: auto;
   }

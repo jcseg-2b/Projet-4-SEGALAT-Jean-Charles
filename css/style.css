@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Variable générales*/
 /*header section*/
 .header {
   display: flex;
@@ -95,6 +96,7 @@
   }
 }
 /*Variable générales*/
+/*reservation section*/
 .reservation {
   /*éléments*/
 }
@@ -223,7 +225,7 @@
 .fonctionality i {
   margin-left: -30px;
   padding-right: 30px;
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 .fonctionality .icon3 {
   color: #9356dc;
@@ -344,6 +346,7 @@
   padding-right: 10px;
 }
 
+/*Variable générales*/
 /*restaurant section*/
 .restaurant {
   display: flex;
@@ -483,7 +486,7 @@
   top: 0;
   left: 0;
   font-weight: bold;
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
@@ -503,6 +506,7 @@
   }
 }
 
+/*Variable générales*/
 #overlay {
   position: fixed;
   top: 0;
@@ -527,6 +531,7 @@
   animation: rotation 1s linear infinite;
 }
 
+/*Variable générales*/
 html, body {
   padding: 0;
   margin: 0;
