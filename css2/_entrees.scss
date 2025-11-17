@@ -17,6 +17,7 @@ margin-top:-10px;
 margin-left:15px;
 @media screen and (min-width:768px){
   margin-left:25px;
+  margin-bottom:10px;
   }
 }
 &__link {
@@ -33,7 +34,7 @@ padding-top:0px;
 margin-left:25px;
 }
   }
-/* 💫 Animation glissante */
+
 .starter {
 display: flex;
 flex-direction: column;
