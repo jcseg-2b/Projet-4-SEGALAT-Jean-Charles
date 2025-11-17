@@ -1,3 +1,5 @@
+@import '../css/variables.scss'; 
+
 /*footer section*/
 .footer{
     padding-left:20px;
@@ -27,7 +29,8 @@
     
 /*éléments*/    
     &__title{
-        color:white;
+        color:$white-color;
+        font-size:20px;
         padding-left:40px;
         font-family: shrikhand;
         @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -47,7 +50,7 @@
        }
 
     &__list2{
-        color:white;
+        color:$white-color;
         list-style-type: none;
         @media screen and (min-width: 1024px) {
             margin-left:-30px;  
@@ -55,7 +58,7 @@
     }
 
     &__list3 {
-        color:white;
+        color:$white-color;
         list-style-type: none;
         display: flex;
         gap:10px;
@@ -72,12 +75,12 @@
     }
   
     &__link{
-        color:white;
+        color:$white-color;
         text-decoration: none;
     }
 
     i {
-        color:white;
+        color:$white-color;
         padding-right: 10px;
     }
 }

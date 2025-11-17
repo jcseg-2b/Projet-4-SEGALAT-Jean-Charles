@@ -1,4 +1,4 @@
-@use 'variables';
+@import 'variables';
 
 /*fonctionality section*/
 
@@ -62,7 +62,7 @@
             border: 1px solid #eaeaea;
             border-radius: 20px;
             font-size: 16px;
-            background-color: #f6f6f6;
+            background-color:$ligth-color;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
             color: black;
@@ -84,12 +84,12 @@
         }
 
         .icon3 {
-            color:#9356dc;
+            color:$purple-color;
         }
     
             .fonctionality__button {
                 color: white;
-                background-color:#9356dc;
+                background-color:$purple-color;
                 border: none;
                 border-radius: 50%;
                 display: flex;

@@ -148,6 +148,7 @@
   transform: scale(1.01);
 }
 
+/*Variable générales*/
 /*fonctionality section*/
 .fonctionality {
   /*eléments*/
@@ -253,6 +254,7 @@
   }
 }
 
+/*Variable générales*/
 /*footer section*/
 .footer {
   padding-left: 20px;
@@ -285,6 +287,7 @@
 }
 .footer__title {
   color: white;
+  font-size: 20px;
   padding-left: 40px;
   font-family: shrikhand;
 }

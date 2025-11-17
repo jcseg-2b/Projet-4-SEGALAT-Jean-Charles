@@ -88,7 +88,7 @@
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transform: fadeIn(100%);
+  transform: FadeIn 100%;
   transition: all 0.6s ease;
 }
 @media screen and (max-width: 1023px) {
@@ -104,6 +104,7 @@
   }
 }
 
+/*Variable générales*/
 .starter {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
@@ -179,6 +180,7 @@
 }
 .starter .name {
   margin-bottom: -15px;
+  margin-top: 1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -237,6 +239,7 @@
     transform: translateX(0);
   }
 }
+/*Variable générales*/
 .dish {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
@@ -312,6 +315,7 @@
 }
 .dish .name {
   margin-bottom: -15px;
+  margin-top: 1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -359,6 +363,7 @@
   max-width: calc(100% - 130px); /* Prix décalé + checkbox */
 }
 
+/*Variable générales*/
 .dessert {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
@@ -433,6 +438,7 @@
 }
 .dessert .name {
   margin-bottom: -15px;
+  margin-top: 1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -601,7 +607,12 @@ html, body {
   margin: 0;
   width: 100%;
   font-family: roboto;
-  max-width: 1440px;
+}
+@media screen and (min-width: 1440px) {
+  html, body {
+    max-width: 1440px;
+    margin: auto;
+  }
 }
 
 main {

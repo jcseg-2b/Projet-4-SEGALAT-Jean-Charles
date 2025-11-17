@@ -1,3 +1,5 @@
+@import '../css/variables.scss';
+
 .dish {
   
   opacity: 0;
@@ -11,7 +13,7 @@ justify-content: center;
   }
 
 &__bar {
-background-color:#81fcd7;
+background-color:$greenligth-color;
 width: 50px;
 height: 5px;
 margin-top:-10px;
@@ -64,6 +66,7 @@ margin: 15px auto;
 }
 .name {
 margin-bottom: -15px;
+margin-top:1px;
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
@@ -84,7 +87,7 @@ white-space: nowrap; /* Empêche le prix de passer à la ligne */
 }
 .checkbox {
 display: flex;
-background-color: #81fcd7;
+background-color:$greenligth-color;
 color: white;
 width: 0;
 height: 100%;
