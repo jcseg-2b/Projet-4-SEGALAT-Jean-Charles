@@ -34,6 +34,7 @@
   background-color: #f6f6f6;
   position: relative;
   margin-top: -50px;
+  padding-bottom: 10px;
   /*éléments*/
 }
 .restaurant .restaurant-section {
@@ -114,7 +115,7 @@
 
 /*Variable générales*/
 /*starter section*/
-.starter {
+.block {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
   animation-delay: 0.3s;
@@ -122,42 +123,38 @@
   /* En hover, le texte a plus d'espace car le prix se décale */
 }
 @media screen and (min-width: 768px) {
-  .starter {
+  .block {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 }
-.starter__bar {
+.block__bar {
   background-color: #81fcd7;
   width: 50px;
   height: 5px;
   margin-top: -10px;
-  margin-left: 15px;
 }
 @media screen and (min-width: 768px) {
-  .starter__bar {
-    margin-left: 25px;
+  .block__bar {
     margin-bottom: 10px;
   }
 }
-.starter__link {
+.block__link {
   text-decoration: none;
   color: inherit;
 }
-.starter__title {
+.block__title {
   font-size: 18px;
   font-weight: 300;
   padding-top: 20px;
-  margin-left: 15px;
 }
 @media screen and (min-width: 768px) {
-  .starter__title {
+  .block__title {
     padding-top: 0px;
-    margin-left: 25px;
   }
 }
-.starter .starter {
+.block .block {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
@@ -165,12 +162,12 @@
   gap: 15px;
 }
 @media screen and (min-width: 768px) {
-  .starter .starter {
+  .block .block {
     width: 60%;
     margin: auto;
   }
 }
-.starter .content {
+.block .content {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -184,11 +181,11 @@
   margin: 15px auto;
 }
 @media screen and (min-width: 768px) {
-  .starter .content {
+  .block .content {
     margin: 7px auto;
   }
 }
-.starter .name {
+.block .name {
   margin-bottom: -15px;
   margin-top: 1px;
   white-space: nowrap;
@@ -196,20 +193,20 @@
   text-overflow: ellipsis;
   max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
 }
-.starter .content p {
+.block .content p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
 }
-.starter .price {
+.block .price {
   text-align: right;
   margin-top: -60px;
   padding-right: 10px;
   transition: transform 200ms ease-in-out;
   white-space: nowrap; /* Empêche le prix de passer à la ligne */
 }
-.starter .checkbox {
+.block .checkbox {
   display: flex;
   background-color: #81fcd7;
   color: white;
@@ -224,17 +221,17 @@
   overflow: hidden;
   border-radius: 0 20px 20px 0;
 }
-.starter .checkbox i {
+.block .checkbox i {
   font-size: 20px;
 }
-.starter .content:hover .checkbox {
+.block .content:hover .checkbox {
   width: 60px;
 }
-.starter .content:hover .price {
+.block .content:hover .price {
   transform: translateX(-60px);
 }
-.starter .content:hover .name,
-.starter .content:hover p {
+.block .content:hover .name,
+.block .content:hover p {
   max-width: calc(100% - 130px); /* Prix décalé + checkbox */
 }
 
@@ -249,255 +246,16 @@
     transform: translateX(0);
   }
 }
-/*Variable générales*/
-/*dish section*/
-.dish {
-  opacity: 0;
-  animation: slideInFromLeft 0.6s ease-out forwards;
-  animation-delay: 0.9s;
-  /*éléments*/
-  /* 💫 Animation glissante */
-  /* En hover, le texte a plus d'espace car le prix se décale */
-}
-@media screen and (min-width: 768px) {
-  .dish {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-.dish__bar {
-  background-color: #81fcd7;
-  width: 50px;
-  height: 5px;
-  margin-top: -10px;
-  margin-left: 15px;
-}
-@media screen and (min-width: 768px) {
-  .dish__bar {
-    margin-left: 25px;
-    margin-bottom: 10px;
-  }
-}
-.dish__link {
-  text-decoration: none;
-  color: inherit;
-}
-.dish__title {
-  font-size: 18px;
-  font-weight: 300;
-  padding-top: 20px;
-  margin-left: 15px;
-}
-@media screen and (min-width: 768px) {
-  .dish__title {
-    margin-left: 25px;
-  }
-}
-.dish .dish {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
-  gap: 15px;
-}
-@media screen and (min-width: 768px) {
-  .dish .dish {
-    width: 60%;
-    margin: auto;
-  }
-}
-.dish .content {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 20px;
-  gap: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px 10px;
-  width: 90%;
-  overflow: hidden;
-  position: relative;
-  margin: 15px auto;
-}
-@media screen and (min-width: 768px) {
-  .dish .content {
-    margin: 7px auto;
-  }
-}
-.dish .name {
-  margin-bottom: -15px;
-  margin-top: 1px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
-}
-.dish .content p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
-}
-.dish .price {
-  text-align: right;
-  margin-top: -60px;
-  padding-right: 10px;
-  transition: transform 200ms ease-in-out;
-  white-space: nowrap; /* Empêche le prix de passer à la ligne */
-}
-.dish .checkbox {
-  display: flex;
-  background-color: #81fcd7;
-  color: white;
-  width: 0;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  transition: width 200ms ease-in-out;
-  position: absolute;
-  right: 0;
-  top: 0;
-  overflow: hidden;
-  border-radius: 0 20px 20px 0;
-}
-.dish .checkbox i {
-  font-size: 20px;
-}
-.dish .content:hover .checkbox {
-  width: 60px;
-}
-.dish .content:hover .price {
-  transform: translateX(-60px);
-}
-.dish .content:hover .name,
-.dish .content:hover p {
-  max-width: calc(100% - 130px); /* Prix décalé + checkbox */
-}
-
-/*Variable générales*/
-/*dessert section*/
 .dessert {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
   animation-delay: 1.5s;
-  /*éléments*/
-  /* En hover, le texte a plus d'espace car le prix se décale */
 }
-@media screen and (min-width: 768px) {
-  .dessert {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-.dessert__bar {
-  background-color: #81fcd7;
-  width: 50px;
-  height: 5px;
-  margin-top: -10px;
-  margin-left: 15px;
-}
-@media screen and (min-width: 768px) {
-  .dessert__bar {
-    margin-left: 25px;
-    margin-bottom: 10px;
-  }
-}
-.dessert__link {
-  text-decoration: none;
-  color: inherit;
-}
-.dessert__title {
-  font-size: 18px;
-  font-weight: 300;
-  padding-top: 20px;
-  margin-left: 15px;
-}
-@media screen and (min-width: 768px) {
-  .dessert__title {
-    margin-left: 25px;
-  }
-}
-.dessert .dessert {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-  padding-right: 20px;
-  gap: 15px;
-}
-@media screen and (min-width: 768px) {
-  .dessert .dessert {
-    width: 60%;
-    margin: auto;
-  }
-}
-.dessert .content {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 20px;
-  gap: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px 10px;
-  width: 90%;
-  overflow: hidden;
-  position: relative;
-  margin: 15px auto;
-}
-@media screen and (min-width: 768px) {
-  .dessert .content {
-    margin: 7px auto;
-  }
-}
-.dessert .name {
-  margin-bottom: -15px;
-  margin-top: 1px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
-}
-.dessert .content p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
-}
-.dessert .price {
-  text-align: right;
-  margin-top: -60px;
-  padding-right: 10px;
-  transition: transform 200ms ease-in-out;
-  white-space: nowrap; /* Empêche le prix de passer à la ligne */
-}
-.dessert .checkbox {
-  display: flex;
-  background-color: #81fcd7;
-  color: white;
-  width: 0;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  transition: width 200ms ease-in-out;
-  position: absolute;
-  right: 0;
-  top: 0;
-  overflow: hidden;
-  border-radius: 0 20px 20px 0;
-}
-.dessert .checkbox i {
-  font-size: 20px;
-}
-.dessert .content:hover .checkbox {
-  width: 60px;
-}
-.dessert .content:hover .price {
-  transform: translateX(-60px);
-}
-.dessert .content:hover .name,
-.dessert .content:hover p {
-  max-width: calc(100% - 130px); /* Prix décalé + checkbox */
+
+.dish {
+  opacity: 0;
+  animation: slideInFromLeft 0.6s ease-out forwards;
+  animation-delay: 0.9s;
 }
 
 .btn {

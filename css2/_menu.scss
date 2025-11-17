@@ -1,15 +1,14 @@
 @import "../css/variables.scss";
 
-/*dessert section*/
-.dessert {
+/*starter section*/
+.block {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
-  animation-delay: 1.5s;
+  animation-delay: 0.3s;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
   }
   /*éléments*/
@@ -18,9 +17,7 @@
     width: 50px;
     height: 5px;
     margin-top: -10px;
-    margin-left: 15px;
     @media screen and (min-width: 768px) {
-      margin-left: 25px;
       margin-bottom: 10px;
     }
   }
@@ -32,13 +29,13 @@
     font-size: 18px;
     font-weight: 300;
     padding-top: 20px;
-    margin-left: 15px;
     @media screen and (min-width: 768px) {
-      margin-left: 25px;
+      padding-top: 0px;
+      
     }
   }
 
-  .dessert {
+  .block {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -49,8 +46,7 @@
       margin: auto;
     }
   }
-
-  .content {
+    .content {
     display: flex;
     flex-direction: column;
     background-color: $white-color;
@@ -117,6 +113,28 @@
   .content:hover p {
     max-width: calc(100% - 130px); /* Prix décalé + checkbox */
   }
+}
+
+/* 🎬 Animation depuis la gauche */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.dessert {
+  opacity: 0;
+  animation: slideInFromLeft 0.6s ease-out forwards;
+  animation-delay: 1.5s;
+}
+.dish {
+  opacity: 0;
+  animation: slideInFromLeft 0.6s ease-out forwards;
+  animation-delay: 0.9s;
 }
 .btn {
   display: flex;
