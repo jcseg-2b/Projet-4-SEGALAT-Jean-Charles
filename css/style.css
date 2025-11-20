@@ -519,6 +519,7 @@
   align-items: center;
   z-index: 9999;
   animation: overlay-fade 2s ease-out forwards;
+  background: url(https://labelleassiette.fr/wp-content/uploads/2024/05/lart-du-dressage-des-assiettes-astuces-et-conseils-professionnels-2.jpg) center/cover no-repeat;
 }
 
 .loader {
