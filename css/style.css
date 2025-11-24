@@ -31,7 +31,8 @@
   display: flex;
   align-items: center;
   margin-right: 1rem;
-  margin-right: 0;
+  margin-right: -80;
+  margin-left: 100px;
 }
 .header__icon i {
   color: black;
@@ -42,7 +43,6 @@
   font-size: 1rem;
   padding: 0.5rem;
   width: 80%;
-  margin-left: 60px;
 }
 
 /* overlay + loader (placer ici ou dans un fichier global, + keyframes au top-level) */
