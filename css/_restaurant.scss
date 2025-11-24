@@ -5,24 +5,25 @@
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
+  
   @media screen and (min-width: 1024px) {
     padding-left: 130px;
     padding-right: 130px;
   }
-
-  /*eléments*/
+  
+  /*éléments*/
   &__img {
     width: 100%;
     height: 230px;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-
+    
     @media screen and (min-width: 1024px) {
       height: 170px;
     }
   }
-
+  
   &__box {
     display: flex;
     flex-direction: column;
@@ -30,11 +31,11 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 60px;
-
+    
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       gap: 30px;
     }
-
+    
     @media screen and (min-width: 1024px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -46,119 +47,163 @@
       width: 100%;
     }
   }
-
+  
   &__article {
     display: flex;
     flex-direction: column;
-    background-color:$white-color;
+    background-color: $white-color;
     width: 100%;
     height: auto;
     border-radius: 15px;
     position: relative;
     min-height: 220px;
-
+    
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       width: 60%;
       margin: auto;
     }
-
+    
     @media screen and (min-width: 1024px) {
       width: 100%;
       height: 251px;
     }
   }
-
+  
   &__link {
     width: 100%;
     text-decoration: none;
     color: black;
-
+    
     @media screen and (min-width: 1024px) {
       width: 100%;
       height: 251px;
     }
   }
-
+  
   &__title {
     padding-left: 15px;
     padding-top: 30px;
-
+    
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       display: flex;
       justify-content: center;
       margin-left: -30px;
     }
-
+    
     @media screen and (min-width: 1024px) {
       display: flex;
       justify-content: left;
       padding-left: 0;
     }
   }
-
+  
   &__content {
     margin-left: 15px;
     font-size: 18px;
     padding-bottom: 10px;
   }
-
+  
   &__paragraph {
     margin-left: 15px;
     margin-top: -25px;
   }
-
+  
   &__button {
     position: absolute;
     right: 30px;
     bottom: 30px;
     z-index: 1;
   }
-
-  &__heart-checkbox {
-    display: none;
+  
+  /* Classe wrapper pour le système checkbox + label */
+  &__heart-wrapper {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1;
+    width: auto;
+    height: auto;
   }
-
+  
+  /* Input checkbox invisible mais cliquable */
+  .heart-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 3;
+    margin: 0;
+  }
+  
   &__heart-label {
     cursor: pointer;
     position: relative;
-
+    display: inline-block;
+    z-index: 2;
+    
     .fa-heart {
       font-size: 24px;
       position: relative;
       transition: all 0.3s ease;
-
+      display: block;
+      
       &::before {
         content: "\f004";
-        font-weight: regular;
+        font-weight: 400;
+        color: black;
+        transition: opacity 0.3s ease;
       }
-
+      
       &::after {
         content: "\f004";
         position: absolute;
         top: 0;
         left: 0;
-        font-weight: bold;
+        font-weight: 900;
         background: linear-gradient(#9356dc, #ff79da);
         -webkit-background-clip: text;
-        color: transparent;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         opacity: 0;
-        transform: fadeIn(100%);
-        transition: all 0.6s ease;
+        transform: fadein(100%);
+        transition: opacity 0.6s ease, transform 0.6s ease;
       }
     }
   }
-
+  
+  /* Animation au clic pour mobile et tablette */
   @media screen and (max-width: 1023px) {
-    &__heart-checkbox:click + &__heart-label .fa-heart::after {
+    .heart-toggle:checked ~ &__heart-label .fa-heart::after {
       opacity: 1;
-      transform: translateY(0);
+      transform: scale(1);
+    }
+    
+    .heart-toggle:checked ~ &__heart-label .fa-heart::before {
+      opacity: 0;
     }
   }
-
+  
+  /* Animation au hover pour desktop */
   @media screen and (min-width: 1024px) {
-    &__heart-label:hover .fa-heart::after {
+    &__heart-wrapper:hover &__heart-label .fa-heart::after {
       opacity: 1;
-      transform: translateY(0);
+      transform: scale(1);
+    }
+    
+    &__heart-wrapper:hover &__heart-label .fa-heart::before {
+      opacity: 0;
     }
   }
+}
+
+/* Classe utilitaire pour l'accessibilité */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

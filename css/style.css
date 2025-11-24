@@ -301,7 +301,11 @@
   display: flex;
   flex-direction: column;
   background-color: #f6f6f6;
-  /*eléments*/
+  /*éléments*/
+  /* Classe wrapper pour le système checkbox + label */
+  /* Input checkbox invisible mais cliquable */
+  /* Animation au clic pour mobile et tablette */
+  /* Animation au hover pour desktop */
 }
 @media screen and (min-width: 1024px) {
   .restaurant {
@@ -413,46 +417,83 @@
   bottom: 30px;
   z-index: 1;
 }
-.restaurant__heart-checkbox {
-  display: none;
+.restaurant__heart-wrapper {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1;
+  width: auto;
+  height: auto;
+}
+.restaurant .heart-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 3;
+  margin: 0;
 }
 .restaurant__heart-label {
   cursor: pointer;
   position: relative;
+  display: inline-block;
+  z-index: 2;
 }
 .restaurant__heart-label .fa-heart {
   font-size: 24px;
   position: relative;
   transition: all 0.3s ease;
+  display: block;
 }
 .restaurant__heart-label .fa-heart::before {
   content: "\f004";
-  font-weight: regular;
+  font-weight: 400;
+  color: black;
+  transition: opacity 0.3s ease;
 }
 .restaurant__heart-label .fa-heart::after {
   content: "\f004";
   position: absolute;
   top: 0;
   left: 0;
-  font-weight: bold;
+  font-weight: 900;
   background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   opacity: 0;
-  transform: fadeIn(100%);
-  transition: all 0.6s ease;
+  transform: fadein(100%);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 @media screen and (max-width: 1023px) {
-  .restaurant__heart-checkbox:click + .restaurant__heart-label .fa-heart::after {
+  .heart-toggle:checked ~ .restaurant__heart-label .fa-heart::after {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
+  }
+  .heart-toggle:checked ~ .restaurant__heart-label .fa-heart::before {
+    opacity: 0;
   }
 }
 @media screen and (min-width: 1024px) {
-  .restaurant__heart-label:hover .fa-heart::after {
+  .restaurant__heart-wrapper:hover .restaurant__heart-label .fa-heart::after {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
   }
+  .restaurant__heart-wrapper:hover .restaurant__heart-label .fa-heart::before {
+    opacity: 0;
+  }
+}
+
+/* Classe utilitaire pour l'accessibilité */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /*Variable générales*/
