@@ -31,7 +31,6 @@
   display: flex;
   align-items: center;
   margin-right: 1rem;
-  margin-right: -80;
   margin-left: 100px;
 }
 .header__icon i {
@@ -45,56 +44,6 @@
   width: 80%;
 }
 
-/* overlay + loader (placer ici ou dans un fichier global, + keyframes au top-level) */
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  animation: overlay-fade 3s ease-out forwards; /* nom clair */
-}
-
-.loader {
-  width: 48px;
-  height: 48px;
-  border: 5px solid red;
-  border-bottom-color: transparent;
-  border-radius: 50%;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite; /* rotation continue et immédiate */
-}
-
-/* keyframes doivent être au top-level (pas imbriqués dans une classe) */
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* animation pour faire disparaître l'overlay après 3s */
-@keyframes overlay-fade {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  90% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-}
 /*Variable générales*/
 /*reservation section*/
 .reservation {
@@ -522,6 +471,22 @@
   background: url(https://labelleassiette.fr/wp-content/uploads/2024/05/lart-du-dressage-des-assiettes-astuces-et-conseils-professionnels-2.jpg) center/cover no-repeat;
 }
 
+/* animation pour faire disparaître l'overlay après 3s */
+@keyframes overlay-fade {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  90% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
 .loader {
   width: 48px;
   height: 48px;
@@ -532,6 +497,14 @@
   animation: rotation 1s linear infinite;
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /*Variable générales*/
 html, body {
   padding: 0;

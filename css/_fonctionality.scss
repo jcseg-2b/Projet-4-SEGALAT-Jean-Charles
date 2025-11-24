@@ -1,7 +1,6 @@
 @import "variables";
 
 /*fonctionality section*/
-
 .fonctionality {
   /*eléments*/
   &-section {
@@ -83,7 +82,7 @@
   }
 
   .fonctionality__button {
-    color: white;
+    color:$white-color;
     background-color: $purple-color;
     border: none;
     border-radius: 50%;
