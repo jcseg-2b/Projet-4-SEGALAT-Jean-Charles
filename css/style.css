@@ -443,7 +443,7 @@
   transition: all 0.6s ease;
 }
 @media screen and (max-width: 1023px) {
-  .restaurant__heart-checkbox:checked + .restaurant__heart-label .fa-heart::after {
+  .restaurant__heart-checkbox:click + .restaurant__heart-label .fa-heart::after {
     opacity: 1;
     transform: translateY(0);
   }

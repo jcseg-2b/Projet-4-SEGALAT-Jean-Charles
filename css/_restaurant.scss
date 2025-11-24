@@ -149,7 +149,7 @@
   }
 
   @media screen and (max-width: 1023px) {
-    &__heart-checkbox:checked + &__heart-label .fa-heart::after {
+    &__heart-checkbox:click + &__heart-label .fa-heart::after {
       opacity: 1;
       transform: translateY(0);
     }
