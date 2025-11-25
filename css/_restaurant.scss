@@ -115,7 +115,7 @@
     z-index: 1;
   }
   
-  /* Classe wrapper pour le système checkbox + label */
+
   &__heart-wrapper {
     position: absolute;
     right: 30px;
@@ -125,7 +125,7 @@
     height: auto;
   }
   
-  /* Input checkbox invisible mais cliquable */
+ 
   .heart-toggle {
     position: absolute;
     opacity: 0;
@@ -172,7 +172,7 @@
     }
   }
   
-  /* Animation au clic pour mobile et tablette */
+
   @media screen and (max-width: 1023px) {
     .heart-toggle:checked ~ &__heart-label .fa-heart::after {
       opacity: 1;
@@ -184,7 +184,7 @@
     }
   }
   
-  /* Animation au hover pour desktop */
+  
   @media screen and (min-width: 1024px) {
     &__heart-wrapper:hover &__heart-label .fa-heart::after {
       opacity: 1;
@@ -197,7 +197,6 @@
   }
 }
 
-/* Classe utilitaire pour l'accessibilité */
 .visually-hidden {
   position: absolute;
   width: 1px;

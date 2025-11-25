@@ -302,10 +302,6 @@
   flex-direction: column;
   background-color: #f6f6f6;
   /*éléments*/
-  /* Classe wrapper pour le système checkbox + label */
-  /* Input checkbox invisible mais cliquable */
-  /* Animation au clic pour mobile et tablette */
-  /* Animation au hover pour desktop */
 }
 @media screen and (min-width: 1024px) {
   .restaurant {
@@ -485,7 +481,6 @@
   }
 }
 
-/* Classe utilitaire pour l'accessibilité */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -512,7 +507,6 @@
   background: url(https://labelleassiette.fr/wp-content/uploads/2024/05/lart-du-dressage-des-assiettes-astuces-et-conseils-professionnels-2.jpg) center/cover no-repeat;
 }
 
-/* animation pour faire disparaître l'overlay après 3s */
 @keyframes overlay-fade {
   0% {
     opacity: 1;
