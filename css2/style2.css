@@ -134,7 +134,6 @@
   animation: slideInFromLeft 0.6s ease-out forwards;
   animation-delay: 0.3s;
   /*éléments*/
-  /* En hover, le texte a plus d'espace car le prix se décale */
 }
 @media screen and (min-width: 768px) {
   .block {
@@ -209,20 +208,20 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
+  max-width: calc(100% - 70px);
 }
 .block .content p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: calc(100% - 70px); /* Réserve l'espace pour le prix + marge */
+  max-width: calc(100% - 70px);
 }
 .block .price {
   text-align: right;
   margin-top: -60px;
   padding-right: 10px;
   transition: transform 200ms ease-in-out;
-  white-space: nowrap; /* Empêche le prix de passer à la ligne */
+  white-space: nowrap;
 }
 .block .checkbox {
   display: flex;
@@ -250,10 +249,9 @@
 }
 .block .content:hover .name,
 .block .content:hover p {
-  max-width: calc(100% - 130px); /* Prix décalé + checkbox */
+  max-width: calc(100% - 130px);
 }
 
-/* 🎬 Animation depuis la gauche */
 @keyframes slideInFromLeft {
   0% {
     opacity: 0;
@@ -270,16 +268,16 @@
   animation-delay: 0.3s;
 }
 
-.dessert {
-  opacity: 0;
-  animation: slideInFromLeft 0.6s ease-out forwards;
-  animation-delay: 1.5s;
-}
-
 .dish {
   opacity: 0;
   animation: slideInFromLeft 0.6s ease-out forwards;
   animation-delay: 0.9s;
+}
+
+.dessert {
+  opacity: 0;
+  animation: slideInFromLeft 0.6s ease-out forwards;
+  animation-delay: 1.5s;
 }
 
 .btn {

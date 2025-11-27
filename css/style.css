@@ -468,13 +468,12 @@
     transform: scale(1);
   }
   .heart-toggle:checked ~ .restaurant__heart-label .fa-heart::before {
-    opacity: 0;
+    opacity: 1;
   }
 }
 @media screen and (min-width: 1024px) {
   .restaurant__heart-wrapper:hover .restaurant__heart-label .fa-heart::after {
     opacity: 1;
-    transform: scale(1);
   }
   .restaurant__heart-wrapper:hover .restaurant__heart-label .fa-heart::before {
     opacity: 0;

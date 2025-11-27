@@ -180,7 +180,7 @@
     }
     
     .heart-toggle:checked ~ &__heart-label .fa-heart::before {
-      opacity: 0;
+      opacity: 1;
     }
   }
   
@@ -188,7 +188,7 @@
   @media screen and (min-width: 1024px) {
     &__heart-wrapper:hover &__heart-label .fa-heart::after {
       opacity: 1;
-      transform: scale(1);
+      
     }
     
     &__heart-wrapper:hover &__heart-label .fa-heart::before {
