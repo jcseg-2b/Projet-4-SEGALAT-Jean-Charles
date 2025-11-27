@@ -459,35 +459,15 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   opacity: 0;
-  transform: fadein(100%);
+  transform: scale(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-@media screen and (max-width: 1023px) {
-  .heart-toggle:checked ~ .restaurant__heart-label .fa-heart::after {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .heart-toggle:checked ~ .restaurant__heart-label .fa-heart::before {
-    opacity: 1;
-  }
+.heart-toggle:checked + .restaurant__heart-label .fa-heart::before {
+  opacity: 0;
 }
-@media screen and (min-width: 1024px) {
-  .restaurant__heart-wrapper:hover .restaurant__heart-label .fa-heart::after {
-    opacity: 1;
-  }
-  .restaurant__heart-wrapper:hover .restaurant__heart-label .fa-heart::before {
-    opacity: 0;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.heart-toggle:checked + .restaurant__heart-label .fa-heart::after {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /*Variable générales*/
